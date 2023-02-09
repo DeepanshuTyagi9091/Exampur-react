@@ -1,26 +1,24 @@
-.background_image{
-    background-image: url(../assets/images/stylish-glowing.avif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    align-items: center;
-    display: grid;
-    place-items: center;
+.background_image {
+  background-image: url(../assets/images/stylish-glowing.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  display: grid;
+  place-items: center;
 }
-.form_border{
-    border: 2px solid black;
-    padding: 6%;
-    border-radius: 10%;
-    background-color: transparent;
+.form_border {
+  border: 2px solid black;
+  padding: 4%;
+  border-radius: 5%;
+  background-color: transparent;
+  scale: 1;
 }
-.form_border:hover{
-    border: 8px solid #f2940c;
-    padding: 6% ;
-} 
-.forget_password{
-margin-left: 2.7rem;
-margin-top: .1rem;
-    font-size: small;
-    font-weight: bold;
+
+.forget_password {
+  margin-left: 2.7rem;
+  margin-top: 3px;
+  font-size: small;
+  font-weight: bold;
 }

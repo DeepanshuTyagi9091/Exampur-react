@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import "./login.css";
 import Input from "../Inputs/input";
 import Button from "../button/button";
-// import { alert } from "bootstrap";
 
 const Login = () => {
   const [state, setState] = useState({
     email: "",
     password: "",
   });
+  let [show,setShow] = useState(false);
 
     // let [email, password] = useState()
     const validation = () => {
       let {email,password}=state;
-      if (email == "") {
+      if (email ==="") {
           alert("enter mail")
         return false;
-      } else if (password == "") {
+      } else if (password ==="") {
        alert ("enter password")
           return false;
       }else{
@@ -49,24 +49,24 @@ const Login = () => {
             id="email"
             placeholder="Username"
             padding="6px"
-            width="20vw"
+            width="100%"
             onChange={inputHandler}
             
           />
           <Input
             id="password"
             placeholder="password"
-            type="password"
+            type={show?"password":"text"}
             padding="6px"
-            width="20vw"
-            mt="1.5rem"
+            width="100%"
+            mt="1rem"
             mb="2px solid #f2940c"
             onChange={inputHandler}
           />
         </div>
         <div className="d-flex mt-4">
           <div className="d-flex">
-            <Input type="checkbox" />
+            <Input type="checkbox" onClick="({setShow(!show)})"/>
             <p className="text-white ms-2">ShowPassword</p>
           </div>
           <div className="text-danger forget_password">Forget password?</div>
@@ -76,8 +76,9 @@ const Login = () => {
           <Button
             width="100%"
             padding="6px"
-            backgroundColor="#5783db"
+            backgroundColor="rgba(221, 19, 53, 0.527)"
             type="submit"
+            className="text-white"
           >
             submit
           </Button>
